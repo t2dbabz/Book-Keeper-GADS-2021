@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BookKeeper">
         <activity
+            android:name=".NewBookActivity"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
