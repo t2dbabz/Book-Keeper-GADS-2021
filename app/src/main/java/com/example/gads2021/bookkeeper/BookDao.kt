@@ -13,8 +13,8 @@ interface BookDao {
     fun getAllBooks(): LiveData<List<Book>>
 
     @Insert
-    fun insertBook(book: Book)
+    suspend fun insertBook(book: Book)
 
     @Delete
-    fun deleteBook(book: Book)
+    suspend fun deleteBook(book: Book)
 }
