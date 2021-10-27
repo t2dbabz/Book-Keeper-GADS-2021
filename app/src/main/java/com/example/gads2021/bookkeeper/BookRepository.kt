@@ -1,13 +1,13 @@
 package com.example.gads2021.bookkeeper
 
-class BookRepository(private val bookDao: BookDao) {
-    fun getAllBooks() = bookDao.getAllBooks()
+class BookRepository(private val db: BookRoomDatabase) {
+    fun getAllBooks() = db.bookDao().getAllBooks()
 
     suspend fun insertBook(book: Book) {
-        bookDao.insertBook(book)
+        db.bookDao().insertBook(book)
     }
 
     suspend fun deleteBook(book: Book) {
-        bookDao.deleteBook(book)
+        db.bookDao().deleteBook(book)
     }
 }

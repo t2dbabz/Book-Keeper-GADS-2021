@@ -1,6 +1,7 @@
 package com.example.gads2021.bookkeeper
 
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 
@@ -22,6 +23,13 @@ class BookViewModel(private val bookRepository: BookRepository): ViewModel() {
 
     init {
         getAllBooks()
+    }
+
+}
+
+class BookViewModelFactory(val bookRepository: BookRepository): ViewModelProvider.Factory {
+    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+        return BookViewModel(bookRepository) as T
     }
 
 }
