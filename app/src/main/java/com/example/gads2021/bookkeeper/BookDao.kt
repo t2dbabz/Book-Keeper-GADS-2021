@@ -1,10 +1,7 @@
 package com.example.gads2021.bookkeeper
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.Query
+import androidx.room.*
 
 @Dao
 interface BookDao {
@@ -14,6 +11,9 @@ interface BookDao {
 
     @Insert
     suspend fun insertBook(book: Book)
+
+    @Update
+    suspend fun updateBook(book: Book)
 
     @Delete
     suspend fun deleteBook(book: Book)

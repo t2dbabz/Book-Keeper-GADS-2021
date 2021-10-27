@@ -5,11 +5,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gads2021.bookkeeper.databinding.ListItemBinding
 
-class BookListAdapter(): RecyclerView.Adapter<BookListAdapter.BookViewHolder>() {
+class BookListAdapter(private  val onClickListener: OnClickListener ): RecyclerView.Adapter<BookListAdapter.BookViewHolder>() {
 
-//    interface OnDeleteClickListener {
-//        fun onDeleteClickListener(book: Book)
-//    }
+    interface OnClickListener {
+        fun onDeleteClickListener(book: Book)
+        fun onEditClickListener(book: Book)
+    }
 
     private var bookList: List<Book> = mutableListOf()
 
@@ -24,7 +25,11 @@ class BookListAdapter(): RecyclerView.Adapter<BookListAdapter.BookViewHolder>() 
 
         fun setupListener() {
             binding.rowDeleteImageView.setOnClickListener {
-               // onDeleteClickListener.onDeleteClickListener(bookList[pos])
+                onClickListener.onDeleteClickListener(bookList[pos])
+            }
+
+            binding.rowEditImageView.setOnClickListener {
+                onClickListener.onEditClickListener(bookList[pos])
             }
         }
 

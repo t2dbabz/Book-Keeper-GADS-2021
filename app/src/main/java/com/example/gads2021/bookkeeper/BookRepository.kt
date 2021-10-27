@@ -7,6 +7,10 @@ class BookRepository(private val db: BookRoomDatabase) {
         db.bookDao().insertBook(book)
     }
 
+    suspend fun updateBook(book: Book) {
+        db.bookDao().updateBook(book)
+    }
+
     suspend fun deleteBook(book: Book) {
         db.bookDao().deleteBook(book)
     }

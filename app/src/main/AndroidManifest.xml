@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BookKeeper">
         <activity
+            android:name=".EditBookActivity"
+            android:exported="true" />
+        <activity
             android:name=".NewBookActivity"
             android:exported="true" />
         <activity
