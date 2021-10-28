@@ -9,6 +9,8 @@ class BookViewModel(private val bookRepository: BookRepository): ViewModel() {
 
     fun getAllBooks() = bookRepository.getAllBooks()
 
+    fun getBooksByBookNameOrAuthor(searchString: String) = bookRepository.getBooksByBookNameOrAuthor(searchString)
+
     fun insertBook(book: Book) {
         viewModelScope.launch {
             bookRepository.insertBook(book)

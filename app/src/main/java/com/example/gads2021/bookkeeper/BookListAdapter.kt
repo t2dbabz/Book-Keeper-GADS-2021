@@ -1,5 +1,6 @@
 package com.example.gads2021.bookkeeper
 
+import android.app.Activity
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -22,6 +23,8 @@ class BookListAdapter(private  val onClickListener: OnClickListener ): RecyclerV
             binding.bookName.text = book
             this.pos = position
         }
+
+
 
         fun setupListener() {
             binding.rowDeleteImageView.setOnClickListener {

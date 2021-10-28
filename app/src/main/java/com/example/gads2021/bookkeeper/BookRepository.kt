@@ -3,6 +3,8 @@ package com.example.gads2021.bookkeeper
 class BookRepository(private val db: BookRoomDatabase) {
     fun getAllBooks() = db.bookDao().getAllBooks()
 
+    fun getBooksByBookNameOrAuthor(searchString: String) = db.bookDao().getBooksByBookOrAuthor(searchString)
+
     suspend fun insertBook(book: Book) {
         db.bookDao().insertBook(book)
     }
