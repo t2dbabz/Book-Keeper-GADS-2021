@@ -1,10 +1,10 @@
 # Book-Keeper-GADS-2021
 
-A rewritten version of the Book Keeper project of the  Android: Room Fundamentals course on pluralsight
+A rewritten version of the Book Keeper project of the  Android: Room Fundamentals course on ```pluralsight```
 
 This GADS21 repo  contains updated ```dependencies```,```components``` and ```Functions``` from the course creation as of 2021 September
 
-Main updates on:
+### Main updates on:
 
     using Material Design Componets
 
@@ -14,13 +14,15 @@ Main updates on:
 
     ViewBinding
 
-Improvements on
+### Improvements on
 
     New search feature instead of creating a new activity as Deep Dive course used.
 
-Screenshot of the final app:
+### Screenshot of the final app:
 
-<img src="drawable/book.png" width="200"/> <img src="drawable/custom.png" width="200"/> <img src="drawable/search.png" width="200"/>
+<img src="screenshot/book.PNG" width="200"/> <img src="screenshot/search.PNG" width="200"/> <img src="screenshot/custom.PNG" width="200"/>
+
+
     
 
 
