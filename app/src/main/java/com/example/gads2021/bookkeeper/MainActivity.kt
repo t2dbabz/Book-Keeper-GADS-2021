@@ -128,5 +128,10 @@ class MainActivity : AppCompatActivity(), BookListAdapter.OnClickListener {
         })
     }
 
+    override fun onRestart() {
+        super.onRestart()
+        invalidateOptionsMenu()
+    }
+
 
 }
