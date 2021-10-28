@@ -12,4 +12,6 @@
     <string name="search">Search</string>
     <string name="updated">Book Updated</string>
     <string name="deleted">Book Deleted</string>
+    <string name="delete">delete</string>
+    <string name="edit_book">edit_book</string>
 </resources>
